@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-basis: auto;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* box-sizing: border-box; */
+    background-color: aliceblue;
+}
+
+.container {
+    position: relative;
+    width: 440px;
+    height: 770px;
+    justify-content: center;
+    align-items: center;
+    background-color: #dbdbdb;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg)rotateZ(-45deg)scale(0.3);
+    box-shadow: 1px solid rgb(124, 64, 64);
+    z-index: 20;
+}
+
+.container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.container:hover img:nth-child(1) {
+    transform: translateZ(40px);
+    opacity: 0.4;
+}
+
+.container:hover img:nth-child(2) {
+    transform: translateZ(60px);
+    opacity: 0.6;
+}
+
+.container:hover img:nth-child(3) {
+    transform: translateZ(80px);
+    opacity: 0.8;
+}
+
+.container:hover img:nth-child(4) {
+    transform: translateZ(120px);
+    opacity: 1;
+}
